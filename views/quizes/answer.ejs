@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Quiz</title>
-	<meta charset="utf-8">
-	<!--<link rel="stylesheet" type="text/css" href="">-->
-</head>
-<body>
-	<h2>Quiz: el juego de las preguntas</h2>
-		<%= respuesta %><br>
-		<a href="/quizes/question">Intentelo otra vez</a>
-</body>
-</html>
+<p><%= respuesta %></p>
+<%if(respuesta=='Incorrecto'){ %>
+<p>La primera letra es: <%= quiz.respuesta.charAt(pista);%>
+
+<%
+ } %></p>
+<a href="/quizes/<%= quiz.id%>?nPistas=<%= pista %>">Inténtelo otra vez</a>
